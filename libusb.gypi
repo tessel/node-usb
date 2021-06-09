@@ -1,6 +1,9 @@
 {
   'variables': {
     'use_udev%': 1,
+    'use_system_libusb%': 'false',
+    'module_name': 'usb_bindings',
+    'module_path': './src/binding'
   },
   'targets': [
     {
@@ -111,8 +114,13 @@
             'libusb/libusb/os/threads_windows.c',
             'libusb/libusb/os/threads_windows.h',
             'libusb/libusb/os/windows_common.h',
-            'libusb/libusb/os/windows_usb.c',
-            'libusb/libusb/os/windows_usb.h',
+            'libusb/libusb/os/windows_winusb.c',
+            'libusb/libusb/os/windows_winusb.h',
+            'libusb/libusb/os/windows_nt_common.c',
+            'libusb/libusb/os/windows_nt_common.h',
+            'libusb/libusb/os/windows_nt_shared_types.h',
+            'libusb/libusb/os/windows_usbdk.c',
+            'libusb/libusb/os/windows_usbdk.h'
             'libusb/msvc/config.h',
             'libusb/msvc/inttypes.h',
             'libusb/msvc/stdint.h',
